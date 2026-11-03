@@ -23,6 +23,14 @@ class DanfeRtc extends Danfe
     }
 
     /**
+     * @return DanfeRtcPdf
+     */
+    protected function novoPdf()
+    {
+        return new DanfeRtcPdf($this->orientacao, 'mm', $this->papel);
+    }
+
+    /**
      * Inclui CRT e reserva o quadro de regime de apuração do IBS/CBS.
      *
      * @param float $x
